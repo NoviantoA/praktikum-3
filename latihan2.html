@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Sederhana Menggunakan Javascript</title>
+    <style>
+      table {
+        width: 400px;
+        height: 220px;
+        border: 1px solid #000;
+        background-color: #00ccff;
+        align-items: center;
+        margin: auto;
+        margin-top: 30px;
+        border-radius: 5px;
+      }
+      .tombol {
+        margin: 10px 10px 0 10px;
+      }
+      .reset {
+        background: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <script type="text/javascript">
+    function jumlah() {
+      var val1 = parseFloat(document.kalkulator.val1.value);
+      var val2 = parseFloat(document.kalkulator.val2.value);
+      var hasil = val1 + val2;
+      document.kalkulator.hasil.value = hasil;
+    }
+    function kurang() {
+      var val1 = parseFloat(document.kalkulator.val1.value);
+      var val2 = parseFloat(document.kalkulator.val2.value);
+      var hasil = val1 - val2;
+      document.kalkulator.hasil.value = hasil;
+    }
+    function kali() {
+      var val1 = parseFloat(document.kalkulator.val1.value);
+      var val2 = parseFloat(document.kalkulator.val2.value);
+      var hasil = val1 * val2;
+      document.kalkulator.hasil.value = hasil;
+    }
+    function bagi() {
+      var val1 = parseFloat(document.kalkulator.val1.value);
+      var val2 = parseFloat(document.kalkulator.val2.value);
+      var hasil = val1 / val2;
+      document.kalkulator.hasil.value = hasil;
+    }
+  </script>
+  <body>
+    <form name="kalkulator">
+      <table class="tabel">
+        <tr>
+          <th colspan="3" scope="col">Kalkulator Sederhana Menggunakan Program Javascript</th>
+        </tr>
+        <tr>
+          <td>Angka Pertama</td>
+          <td><input type="number" name="val1" /></td>
+        </tr>
+        <tr>
+          <td>Angka Kedua</td>
+          <td><input type="number" name="val2" /></td>
+        </tr>
+        <tr>
+          <td>Hasil</td>
+          <td><input type="number" name="hasil" /></td>
+        </tr>
+        <tr>
+          <td class="btn" colspan="3" align="center">
+            <input class="tombol" type="button" onclick="jumlah()" value="  +  " />
+            <input class="tombol" type="button" onclick="kurang()" value="  -  " />
+
+            <input class="tombol" type="button" onclick="kali()" value="  *  " />
+
+            <input class="tombol" type="button" onclick="bagi()" value="  /  " />
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>
+            <input class="reset" type="reset" value="reset" name="reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
